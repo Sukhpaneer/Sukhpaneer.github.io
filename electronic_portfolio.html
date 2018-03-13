@@ -1,8 +1,100 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Electronic Portfolio</title>
-    </head>
-    <body>
-      <h1>Sukhvir's Electronic Online Portfolio<h1>
-         
+
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: courier;
+      }
+
+      .header,
+      .footer {
+        background-color: black;
+        color: yellow;
+        padding: 15px;
+      }
+
+      h1 {
+        font-family: courier;
+      }
+
+      .footer {
+        padding: 25px;
+      }
+
+      .column {
+        float: left;
+        padding: 15px;
+      }
+
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .menu {
+        width: 25%;
+      }
+
+      .content {
+        width: 75%
+      }
+
+      .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu li {
+        padding: 8px;
+        margin-bottom: 8px;
+        background-color: white;
+        color: white;
+      }
+
+      .menu li:hover {
+        background-color: yellow;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <h1>Sukhvir's Electronic Portfolio</h1>
+    </div>
+    <div class="clearfix">
+      <div class="column menu">
+        <ul>
+          <li><a href="academic history">Academic History</a></li>
+          <li><a href="work & volunteer">Work & Volunteer Experience </a></li>
+          <li><a href="accomplishments">Accomplishments</a></li>
+          <li><a href="contact">Contact</a></li>
+          &emsp; &emsp; &emsp; &emsp;
+
+
+        </ul>
+      </div>
+
+      <div class="column content">
+      </div>
+
+
+
+
+      <div class="footer">
+      </div>
+      
+      
+      
+    
+    </div>
+
+
+  </body>
+
+</html>
