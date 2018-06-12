@@ -1,0 +1,40 @@
+function start() {
+
+  var ready = prompt('Are you ready to play? Yes or No').toUpperCase();
+  if (ready === 'Yes') {
+    alert('You are ready to play!');
+    newGame();
+
+  } else {
+    alert('Hope to see you soon!');
+  }
+
+}
+
+function newGame() {
+  alert('You wake up on a Bathroom floor, when you stand up you look in the mirror to find a bump on your head. When you go to touch the bump you hear a loud Bang! then music starts playing');
+
+  alert('You decide to leave the Bathroom and end up in a Hallway, You start to hear the music more clearly and start to bop your head to it.');
+
+  alert('When the song is over there is a long minute of just silence, Suddenly you start hearing heavy rapid footsteps');
+
+  var options = prompt('Do you hide in the Bathroom or go to the Living Room where the music was playing ').toUpperCase();
+
+  switch (options) {
+  
+    case 'Living Room':
+      alert('You decide to go down the Hallway which leads to the Living Room ');
+      livingRoom();
+      break;
+      
+    case 'Bathroom':
+      alert('10 minutes go by and you leave the Bathroom and enter the Hallway which leads to the Living Room');
+      bathRoom();
+      break;
+
+  }
+}
+
+function livingRoom() {
+alert('')
+}
