@@ -1,7 +1,7 @@
 function start() {
 
   var ready = prompt('Are you ready to play? Yes or No').toUpperCase();
-  if (ready === 'Yes') {
+  if (ready === 'YES') {
     alert('You are ready to play!');
     newGame();
 
@@ -17,24 +17,93 @@ function newGame() {
   alert('You decide to leave the Bathroom and end up in a Hallway, You start to hear the music more clearly and start to bop your head to it.');
 
   alert('When the song is over there is a long minute of just silence, Suddenly you start hearing heavy rapid footsteps');
+  options();
+}
 
-  var options = prompt('Do you hide in the Bathroom or go to the Living Room where the music was playing ').toUpperCase();
+function options() {
+  var option = prompt('Do you hide in the Bathroom or go to the Living Room where the music was playing? ').toUpperCase();
 
-  switch (options) {
-  
-    case 'Living Room':
+  switch (option) {
+
+    case 'LIVING ROOM':
       alert('You decide to go down the Hallway which leads to the Living Room ');
       livingRoom();
       break;
-      
-    case 'Bathroom':
+
+    case 'BATHROOM':
       alert('10 minutes go by and you leave the Bathroom and enter the Hallway which leads to the Living Room');
-      bathRoom();
+      livingRoom();
       break;
 
   }
 }
 
 function livingRoom() {
-alert('')
+  alert('You are in a empty Living Room with music playing on a record player. When the song is over a heavy hand lands on your shoulder *thud* ');
+  alert('The man asks " Hey man where were you? I have been looking every where for you."');
+  var livingRooms = prompt("Do you tell the Truth or Lie?").toUpperCase();
+
+  switch (livingRooms) {
+
+    case 'TRUTH':
+      alert("I don't know what happened, I just woke up in the Bathroom on the floor and discovered a bump on my head");
+      truth();
+      break;
+
+    case 'LIE':
+      alert("Bro, i was sitting here the whole time.");
+      alert('The man laughs and says "I must have been blind to not see you" ');
+      lie();
+      break;
+  }
+
 }
+
+function truth() {
+  alert('"Damn that is rough"');
+  alert('The man brings you a ice pack to put on your head. He then asks you if you remember anything from before you ended up in the Bathroom');
+  alert('You tell him that you do not know what happened');
+  alert('The man offers to take you to the hospital')
+  alert('The man takes you to the hospital but little does he know you are wanted by the police and if you go to the hospital you might be seen');
+  hospital();
+}
+
+function lie() {
+  alert('The man offers to take you to the hospital');
+  alert('Umm BRO I cannot go to the hospital, Im scared of needles...');
+  alert('The man takes you to the hospital but little does he know you are wanted by the police and if you go to the hospital you might be seen');
+hospital();
+
+}
+
+function hospital() {
+  alert('You arrive at the hospital');
+  var hospital = prompt('You see 2 police officers at the front enterance, Do you Run or Give up and turn yourself in?').toUpperCase();
+  switch (hospital) {
+
+    case 'RUN':
+      alert('The cop catches a glimpse of you and yells "HEY YOU, STOP"');
+      alert('You start to run as fast as you can');
+      alert('15 minutes go by...');
+      alert('There sirens all around you then suddenly the sirens stop, when you turn the corner to check if it is all clear... ');
+      alert('"Tekashi you are under arrest for murder"');
+     theEnd();
+      break;
+
+    case 'GIVE UP':
+      alert('"Tekashi you are under arrest for murder"');
+      theEnd();
+    break;
+
+  }
+
+}
+
+
+
+function theEnd() {
+  alert('The End')
+
+}
+
+start();
